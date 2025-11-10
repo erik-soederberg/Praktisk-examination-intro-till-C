@@ -32,8 +32,11 @@ public class SocketManager
         _client.On(MessageEvent, response =>
         {
             string receivedMessage = response.GetValue<string>();
-            
             Console.WriteLine($"Received message: {receivedMessage}");
+            
+            // Debug code to receive json content 
+            // string receivedMessage = response.GetValue<string>();
+            // Console.WriteLine(receivedMessage);
         });
 
         _client.On(UserJoinedChat, response =>
