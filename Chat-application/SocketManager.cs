@@ -75,5 +75,11 @@ public class SocketManager
         await _client.EmitAsync(MessageEvent, message);
         Console.WriteLine($"You said: {message}");
     }
+    
+    public static async Task NotificationOnJoin(string userName)
+    {
+        await _client.EmitAsync(JoinEvent, userName);
+        Console.WriteLine($"{userName} joined the chat!");
+    }
 }
 
