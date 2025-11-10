@@ -10,7 +10,10 @@ public class SocketManager
     
     public static List<string> messages;
     
-    private static readonly string EventName = "ahmad123_message";
+    private static readonly string MessageEvent = "message";      
+    private static readonly string JoinEvent = "join";            
+    private static readonly string UserJoinedEvent = "user_joined"; 
+    private static readonly string UserLeftEvent = "user_left"; 
     
     static SocketManager()
     {
@@ -26,7 +29,7 @@ public class SocketManager
         });
         
       
-        _client.On(EventName, response =>
+        _client.On("message", response =>
         {
             string receivedMessage = response.GetValue<string>();
             
@@ -54,7 +57,7 @@ public class SocketManager
     
     public static async Task SendMessage(string message)
     {
-        await _client.EmitAsync(EventName, message);
+        await _client.EmitAsync("message", message);
         Console.WriteLine($"You said: {message}");
     }
 }
