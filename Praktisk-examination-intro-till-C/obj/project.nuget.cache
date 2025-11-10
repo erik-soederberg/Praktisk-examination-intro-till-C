@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "sIUMIvbyGx8=",
+  "dgSpecHash": "CuTqJUJn0RA=",
   "success": true,
   "projectFilePath": "C:\\Users\\soder\\Documents\\SYS25D\\INTRODUKTION TILL C#\\Examinationer\\Praktisk-examination-intro-till-C\\Praktisk-examination-intro-till-C\\Praktisk-examination-intro-till-C.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\soder\\.nuget\\packages\\socketio.core\\3.1.2\\socketio.core.3.1.2.nupkg.sha512",
+    "C:\\Users\\soder\\.nuget\\packages\\socketio.serializer.core\\3.1.2\\socketio.serializer.core.3.1.2.nupkg.sha512",
+    "C:\\Users\\soder\\.nuget\\packages\\socketio.serializer.systemtextjson\\3.1.2\\socketio.serializer.systemtextjson.3.1.2.nupkg.sha512",
+    "C:\\Users\\soder\\.nuget\\packages\\socketioclient\\3.1.2\\socketioclient.3.1.2.nupkg.sha512",
+    "C:\\Users\\soder\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
+    "C:\\Users\\soder\\.nuget\\packages\\system.text.json\\8.0.4\\system.text.json.8.0.4.nupkg.sha512"
+  ],
   "logs": []
 }
