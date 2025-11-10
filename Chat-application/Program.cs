@@ -4,9 +4,28 @@
 await SocketManager.Connect();
 await Task.Delay(3000);
 
-Console.WriteLine("Welcome to SYS25D's chat! :D ");
-Console.WriteLine($"Enter your name to join the chat: ");
-string userName = Console.ReadLine();
+
+Console.WriteLine("Welcome to SYS25D's chat! :D");
+Console.WriteLine("Username may only contain letters and must be between 3-10 characters.");
+
+string userName;
+
+while (true)
+{
+    Console.Write("Enter your name to join the chat: ");
+    userName = Console.ReadLine();
+    
+    if (!string.IsNullOrWhiteSpace(userName) &&
+        userName.Length >= 3 &&
+        userName.Length <= 10 &&
+        userName.All(char.IsLetter))
+    {
+        break; 
+    }
+    
+    Console.WriteLine("Invalid input! Please enter a name with only letters and between 3–10 characters).");
+    
+}
 
 await SocketManager.NotificationOnJoin(userName);
 
@@ -14,7 +33,7 @@ while (true)
 {
     string userInput = Console.ReadLine();
     
-    if (userInput == "/exit" || userInput == "/quit")
+    if (userInput == "quit" || userInput == "exit")
     {
         break;
     }

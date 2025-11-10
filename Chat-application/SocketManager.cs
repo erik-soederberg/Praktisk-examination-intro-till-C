@@ -76,7 +76,7 @@ public class SocketManager
     public static async Task SendMessage(string message)
     {
         await _client.EmitAsync(MessageEvent, message);
-        Console.WriteLine($"You said: {message}");
+        Console.WriteLine($"You: {message}");
     }
     
     public static async Task NotificationOnJoin(string userName)
