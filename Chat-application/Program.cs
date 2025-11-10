@@ -4,7 +4,7 @@
 await SocketManager.Connect();
 await Task.Delay(3000);
 
-
+Console.WriteLine("Welcome to SYS25D's chat! :D ");
 Console.WriteLine($"Enter your name to join the chat: ");
 string userName = Console.ReadLine();
 

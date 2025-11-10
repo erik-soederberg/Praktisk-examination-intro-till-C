@@ -82,7 +82,7 @@ public class SocketManager
     public static async Task NotificationOnJoin(string userName)
     {
         await _client.EmitAsync(JoinEvent, userName);
-        Console.WriteLine($"{userName} joined the chat!");
+        Console.WriteLine($"{userName} joined the chat <3");
     }
 }
 

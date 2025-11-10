@@ -31,3 +31,16 @@ Chat-application/obj/Debug/net9.0/Chat-application.sourcelink.json
 *.json
 *.dll
 *.dll
+*.dll
+*.pdb
+*.cs
+*.cache
+*.dll
+*.pdb
+*.json
+*.dll
+*.dll
+bin/
+obj/
+*.user
+*.vs
