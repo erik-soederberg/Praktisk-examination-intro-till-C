@@ -4,7 +4,7 @@ using SocketIOClient;
 
 public class SocketManager
 {
-    private static SocketIO _client;
+    private static SocketIO? _client;
 
     private static readonly string Path = "/sys25d";
     
@@ -28,8 +28,8 @@ public class SocketManager
             Path = Path
         });
         
-      
-        _client.On("message", response =>
+        
+        _client.On(MessageEvent, response =>
         {
             string receivedMessage = response.GetValue<string>();
             
@@ -57,7 +57,7 @@ public class SocketManager
     
     public static async Task SendMessage(string message)
     {
-        await _client.EmitAsync("message", message);
+        await _client.EmitAsync(MessageEvent, message);
         Console.WriteLine($"You said: {message}");
     }
 }

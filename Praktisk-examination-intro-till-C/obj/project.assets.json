@@ -266,19 +266,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\soder\\.nuget\\packages\\": {}
+    "/Users/eriksoderberg/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\soder\\Documents\\SYS25D\\INTRODUKTION TILL C#\\Examinationer\\Praktisk-examination-intro-till-C\\Praktisk-examination-intro-till-C\\Praktisk-examination-intro-till-C.csproj",
+      "projectUniqueName": "/Users/eriksoderberg/Documents/SYS25D/Introduktion till C#/Examinationer/Praktisk-examination-intro-till-C/Praktisk-examination-intro-till-C/Praktisk-examination-intro-till-C.csproj",
       "projectName": "Praktisk-examination-intro-till-C",
-      "projectPath": "C:\\Users\\soder\\Documents\\SYS25D\\INTRODUKTION TILL C#\\Examinationer\\Praktisk-examination-intro-till-C\\Praktisk-examination-intro-till-C\\Praktisk-examination-intro-till-C.csproj",
-      "packagesPath": "C:\\Users\\soder\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\soder\\Documents\\SYS25D\\INTRODUKTION TILL C#\\Examinationer\\Praktisk-examination-intro-till-C\\Praktisk-examination-intro-till-C\\obj\\",
+      "projectPath": "/Users/eriksoderberg/Documents/SYS25D/Introduktion till C#/Examinationer/Praktisk-examination-intro-till-C/Praktisk-examination-intro-till-C/Praktisk-examination-intro-till-C.csproj",
+      "packagesPath": "/Users/eriksoderberg/.nuget/packages/",
+      "outputPath": "/Users/eriksoderberg/Documents/SYS25D/Introduktion till C#/Examinationer/Praktisk-examination-intro-till-C/Praktisk-examination-intro-till-C/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\soder\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/eriksoderberg/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -329,7 +329,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
