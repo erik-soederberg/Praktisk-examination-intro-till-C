@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Praktisk-examination-intro-till-C", "Praktisk-examination-intro-till-C\Praktisk-examination-intro-till-C.csproj", "{C208D172-3FEC-4661-B04E-E87A9E627301}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat-application", "Chat-application\Chat-application.csproj", "{C208D172-3FEC-4661-B04E-E87A9E627301}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

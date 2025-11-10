@@ -271,11 +271,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/eriksoderberg/Documents/SYS25D/Introduktion till C#/Examinationer/Praktisk-examination-intro-till-C/Praktisk-examination-intro-till-C/Praktisk-examination-intro-till-C.csproj",
-      "projectName": "Praktisk-examination-intro-till-C",
-      "projectPath": "/Users/eriksoderberg/Documents/SYS25D/Introduktion till C#/Examinationer/Praktisk-examination-intro-till-C/Praktisk-examination-intro-till-C/Praktisk-examination-intro-till-C.csproj",
+      "projectUniqueName": "/Users/eriksoderberg/Documents/SYS25D/Introduktion till C#/Examinationer/Praktisk-examination-intro-till-C/Chat-application/Chat-application.csproj",
+      "projectName": "Chat-application",
+      "projectPath": "/Users/eriksoderberg/Documents/SYS25D/Introduktion till C#/Examinationer/Praktisk-examination-intro-till-C/Chat-application/Chat-application.csproj",
       "packagesPath": "/Users/eriksoderberg/.nuget/packages/",
-      "outputPath": "/Users/eriksoderberg/Documents/SYS25D/Introduktion till C#/Examinationer/Praktisk-examination-intro-till-C/Praktisk-examination-intro-till-C/obj/",
+      "outputPath": "/Users/eriksoderberg/Documents/SYS25D/Introduktion till C#/Examinationer/Praktisk-examination-intro-till-C/Chat-application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/eriksoderberg/.nuget/NuGet/NuGet.Config"

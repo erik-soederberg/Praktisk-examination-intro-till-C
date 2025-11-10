@@ -11,7 +11,7 @@ public class SocketManager
     public static List<string> Messages;
     
     private static readonly string MessageEvent = "message";      
-    private static readonly string JoinEvent = "join";            
+    private static readonly string JoinEvent = "join";         
     private static readonly string UserJoinedChat = "user_joined_chat"; 
     private static readonly string UserLeftChat = "user_left_chat"; 
     
