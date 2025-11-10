@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Praktisk-examination-intro-till-C")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfe5d77fc36d81b6d4a3fa3a6d3f06dfa5354327")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b61468b062684c262abb1f7b97dbec43f27c7607")]
 [assembly: System.Reflection.AssemblyProductAttribute("Praktisk-examination-intro-till-C")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Praktisk-examination-intro-till-C")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

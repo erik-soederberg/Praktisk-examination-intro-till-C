@@ -8,16 +8,16 @@ public class SocketManager
 
     private static readonly string Path = "/sys25d";
     
-    public static List<string> messages;
+    public static List<string> Messages;
     
     private static readonly string MessageEvent = "message";      
     private static readonly string JoinEvent = "join";            
-    private static readonly string UserJoinedEvent = "user_joined"; 
-    private static readonly string UserLeftEvent = "user_left"; 
+    private static readonly string UserJoinedChat = "user_joined_chat"; 
+    private static readonly string UserLeftChat = "user_left_chat"; 
     
     static SocketManager()
     {
-        messages = [];
+        Messages = [];
     }
     
     public static async Task Connect()
@@ -34,6 +34,21 @@ public class SocketManager
             string receivedMessage = response.GetValue<string>();
             
             Console.WriteLine($"Received message: {receivedMessage}");
+        });
+
+        _client.On(UserJoinedChat, response =>
+        {
+            string userName = response.GetValue<string>();
+
+            Console.WriteLine($"{userName} Joined the chat <3 ");
+
+        });
+
+        _client.On(UserLeftChat, response =>
+        {
+            string userName = response.GetValue<string>();
+
+            Console.WriteLine($"{userName} Left the chat </3 ");
         });
         
         _client.OnConnected += (sender, args) =>

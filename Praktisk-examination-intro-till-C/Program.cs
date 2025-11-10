@@ -1,7 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-
-using Praktisk_examination_intro_till_C;
+﻿using Praktisk_examination_intro_till_C;
 
 await SocketManager.Connect();
 
