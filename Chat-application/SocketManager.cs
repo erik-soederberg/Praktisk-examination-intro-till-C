@@ -31,12 +31,16 @@ public class SocketManager
         
         _client.On(MessageEvent, response =>
         {
+            /*
             string receivedMessage = response.GetValue<string>();
             Console.WriteLine($"Received message: {receivedMessage}");
+            */
             
-            // Debug code to receive json content 
-            // string receivedMessage = response.GetValue<string>();
-            // Console.WriteLine(receivedMessage);
+            // Comment out to not recieve ONLY the string-data
+             // string receivedMessage = response.GetValue<string>();
+             
+             Console.WriteLine("Raw data received:");
+             Console.WriteLine(response.ToString());
         });
 
         _client.On(UserJoinedChat, response =>
