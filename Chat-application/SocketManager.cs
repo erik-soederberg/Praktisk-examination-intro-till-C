@@ -33,16 +33,18 @@ public class SocketManager
         
         _client.On(MessageEvent, response =>
         {
-            /*
-            string receivedMessage = response.GetValue<string>();
-            Console.WriteLine($"Received message: {receivedMessage}");
-            */
-            
-            // Comment out to not recieve ONLY the string-data
-             // string receivedMessage = response.GetValue<string>();
-             
-             Console.WriteLine("Raw data received:");
-             Console.WriteLine(response.ToString());
+            try
+            {
+                string json = response.GetValue<string>();
+                MessageData message = JsonSerializer.Deserialize<MessageData>(json);
+                Console.WriteLine($"[{message.Timestamp:t}] {message.Username}: {message.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error parsing message: {ex.Message}");
+                Console.WriteLine(response.ToString());
+            }
+
         });
 
         _client.On(UserJoinedChat, response =>

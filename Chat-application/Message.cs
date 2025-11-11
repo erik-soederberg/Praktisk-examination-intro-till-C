@@ -1,22 +1,24 @@
 namespace Praktisk_examination_intro_till_C;
 
-public class Message
+public class MessageData
 {
-    public DateTime TimeStamp { get; }
-    public string User { get; }
-    public string Messages { get; }
+    public string Status { get;  }
+    public DateTime Timestamp { get; }
+    public string Username { get; }
+    public string Message { get; }
 
-    public Message(DateTime timestamp, string user, string messages)
+    public MessageData(string status, DateTime timestamp, string username, string message)
     {
-        User = user;
-        Messages = messages;
-        TimeStamp = timestamp;
+        Status = status;
+        Username = username;
+        Message = message;
+        Timestamp = timestamp;
     }
     
 }
-public class UserMessage : Message
+public class UserMessage : MessageData
 {
-    public UserMessage(DateTime timestamp, string user, string messages) : base(timestamp, user, messages)
+    public UserMessage(DateTime timestamp, string user, string messages) : base("message", timestamp, user, messages)
     {
         
     }
