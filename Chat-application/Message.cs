@@ -14,5 +14,12 @@ public class Message
     }
     
 }
+public class UserMessage : Message
+{
+    public UserMessage(DateTime timestamp, string user, string messages) : base(timestamp, user, messages)
+    {
+        
+    }
+}
 
 
