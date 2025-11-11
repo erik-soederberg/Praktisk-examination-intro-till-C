@@ -1,6 +1,8 @@
 namespace Praktisk_examination_intro_till_C;
 
 using SocketIOClient;
+using System.Text.Json;
+
 
 public class SocketManager
 {
@@ -77,9 +79,12 @@ public class SocketManager
         Console.WriteLine($"Connected: {_client.Connected}");
     }
     
-    public static async Task SendMessage(string message)
+    public static async Task SendMessage(string message, string userName)
     {
-        await _client.EmitAsync(MessageEvent, message);
+        var userMessage = new UserMessage(DateTime.Now, userName, message);
+        string jsonMessage = JsonSerializer.Serialize(userMessage);
+        
+        await _client.EmitAsync(MessageEvent, jsonMessage);
         Console.WriteLine($"You: {message}");
     }
     

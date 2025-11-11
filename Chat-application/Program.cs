@@ -38,7 +38,7 @@ while (true)
         break;
     }
     
-    await SocketManager.SendMessage(userInput);
+    await SocketManager.SendMessage(userInput, userName);
    
 }
 
