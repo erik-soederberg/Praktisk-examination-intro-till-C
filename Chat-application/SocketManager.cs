@@ -88,5 +88,14 @@ public class SocketManager
         await _client.EmitAsync(JoinEvent, userName);
         Console.WriteLine($"{userName} joined the chat <3");
     }
-}
+
+    public static async Task Disconnect()
+    {
+        if (_client != null)
+        {
+            await _client.DisconnectAsync();
+            Console.WriteLine($"You have successfully disconnected.");
+        }
+    }
+}   
 

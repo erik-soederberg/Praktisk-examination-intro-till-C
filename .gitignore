@@ -44,3 +44,12 @@ bin/
 obj/
 *.user
 *.vs
+*.dll
+*.pdb
+*.cs
+*.cache
+*.dll
+*.pdb
+*.json
+*.dll
+*.dll

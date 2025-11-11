@@ -41,3 +41,5 @@ while (true)
     await SocketManager.SendMessage(userInput);
    
 }
+
+await SocketManager.Disconnect();
