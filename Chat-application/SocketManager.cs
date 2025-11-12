@@ -14,8 +14,8 @@ public class SocketManager
     
     private static readonly string MessageEvent = "message";      
     private static readonly string JoinEvent = "join";         
-    private static readonly string UserJoinedChat = "user_joined_chat"; 
-    private static readonly string UserLeftChat = "user_left_chat"; 
+    private static string _userName;
+
     
     static SocketManager()
     {
@@ -24,6 +24,7 @@ public class SocketManager
     
     public static async Task Connect()
     {
+        
         
         _client = new SocketIO("wss://api.leetcode.se", new SocketIOOptions
         {
@@ -47,20 +48,42 @@ public class SocketManager
 
         });
 
-        _client.On(UserJoinedChat, response =>
+        _client.On("join", response =>
         {
-            string userName = response.GetValue<string>();
+            try
+            {
+                string joinedUser = response.GetValue<string>();
 
-            Console.WriteLine($"{userName} Joined the chat <3 ");
-
+                // Only show if it's not myself
+                if (!string.Equals(joinedUser, _userName, StringComparison.OrdinalIgnoreCase))
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"{joinedUser} just joined the chat!");
+                    Console.ResetColor();
+                }
+            }
+            catch
+            {
+                Console.WriteLine("A new user joined.");
+            }
         });
 
-        _client.On(UserLeftChat, response =>
+        _client.On("km_leave", response =>
         {
-            string userName = response.GetValue<string>();
-
-            Console.WriteLine($"{userName} Left the chat </3 ");
+            try
+            {
+                string userLeft = response.GetValue<string>();
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine($"{userLeft} has left the chat.");
+                Console.ResetColor();
+            }
+            catch
+            {
+                Console.WriteLine("A user left the chat.");
+            }
         });
+
+
         
         _client.OnConnected += (sender, args) =>
         {
@@ -100,9 +123,11 @@ public class SocketManager
     
     public static async Task NotificationOnJoin(string userName)
     {
+        _userName = userName;
         await _client.EmitAsync(JoinEvent, userName);
         Console.WriteLine($"{userName} joined the chat <3");
     }
+
 
     public static async Task Disconnect()
     {
