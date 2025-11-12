@@ -72,6 +72,14 @@ public class SocketManager
         {
             Console.WriteLine("Disconnected!");
         };
+        
+        _client.OnAny((eventName, response) =>
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"!DEBUG! Event received: {eventName}");
+            Console.ResetColor();
+        });
+
 
         
         await _client.ConnectAsync();
@@ -105,4 +113,3 @@ public class SocketManager
         }
     }
 }   
-
