@@ -2,11 +2,9 @@
 
 
 await SocketManager.Connect();
-await Task.Delay(3000);
 
-
-Console.WriteLine("Welcome to SYS25D's chat! :D");
-Console.WriteLine("Username may only contain letters and must be between 3-10 characters.");
+Console.WriteLine("*** Welcome to SYS25D's chat ***");
+Console.WriteLine("*** Username may only contain letters and must be between 3-10 characters. ***");
 
 string userName;
 

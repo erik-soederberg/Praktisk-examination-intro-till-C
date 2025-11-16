@@ -53,8 +53,7 @@ public class SocketManager
             try
             {
                 string joinedUser = response.GetValue<string>();
-
-                // Only show if it's not myself
+                
                 if (!string.Equals(joinedUser, _userName, StringComparison.OrdinalIgnoreCase))
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -82,32 +81,13 @@ public class SocketManager
                 Console.WriteLine("A user left the chat.");
             }
         });
-
-
         
         _client.OnConnected += (sender, args) =>
         {
             Console.WriteLine("Connected!");
         };
         
-        
-        _client.OnDisconnected += (sender, args) =>
-        {
-            Console.WriteLine("Disconnected!");
-        };
-        
-        _client.OnAny((eventName, response) =>
-        {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"!DEBUG! Event received: {eventName}");
-            Console.ResetColor();
-        });
-
-
-        
         await _client.ConnectAsync();
-        
-        await Task.Delay(2000);
         
         Console.WriteLine($"Connected: {_client.Connected}");
     }
